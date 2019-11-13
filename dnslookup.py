@@ -20,9 +20,9 @@ a = args.a
 d = args.d
 
 """
-Main part of the application l
+namelookup() function. This will be the main workhorse of the applciation for now. 
 """
-def namelookup():
+def nameLookup():
     if d == 'None' and a == 'None':
         print("Please enter a name or address to look up")
     elif d != 'None' and a == 'None':
@@ -34,5 +34,8 @@ def namelookup():
     else:
         print("You can only pick a name or address not both.")
     return
-    
-namelookup()
+
+"""
+Calling the function
+"""
+nameLookup()
