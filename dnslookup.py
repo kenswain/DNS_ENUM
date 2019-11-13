@@ -1,7 +1,16 @@
+"""
+
+DNS Enumeration project. Right now we just do the basic one IP and one
+hostname lookup. In the future I am looking to add more options such as
+MX Record lookup and thd like. 
+
+"""
+#Basic imports
 import sys
 import socket
 import argparse
 
+#Setting up parsers for arguments
 parser = argparse.ArgumentParser("Looking for command line arguments of domain names")
 parser.add_argument('-d', default='None', type=str, help='Domain name you are looking up')
 parser.add_argument('-a', default='None', help='Ip address you are looking up')
@@ -10,7 +19,9 @@ args = parser.parse_args()
 a = args.a
 d = args.d
 
-
+"""
+Main part of the application l
+"""
 
 if d == 'None' and a == 'None':
     print("Please enter a name or address to look up")
