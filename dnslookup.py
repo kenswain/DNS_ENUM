@@ -22,14 +22,17 @@ d = args.d
 """
 Main part of the application l
 """
-
-if d == 'None' and a == 'None':
-    print("Please enter a name or address to look up")
-elif d != 'None' and a == 'None':
-    addr2 = socket.gethostbyname(d)
-    print 'The IP Address for', d, 'is', addr2
-elif a != 'None' and d == 'None':
-    addr2 = socket.gethostbyaddr(a)
-    print 'The hosename for', a, 'is', addr2[0]
-else:
-    print("You can only pick a name or address not both.")
+def namelookup():
+    if d == 'None' and a == 'None':
+        print("Please enter a name or address to look up")
+    elif d != 'None' and a == 'None':
+        addr2 = socket.gethostbyname(d)
+        print 'The IP Address for', d, 'is', addr2
+    elif a != 'None' and d == 'None':
+        addr2 = socket.gethostbyaddr(a)
+        print 'The hosename for', a, 'is', addr2[0]
+    else:
+        print("You can only pick a name or address not both.")
+    return
+    
+namelookup()
